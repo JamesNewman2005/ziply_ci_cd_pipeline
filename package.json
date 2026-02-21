@@ -1,0 +1,23 @@
+{
+  "name": "@ziply/ci-config",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shared CI/CD configs for Ziply projects",
+  "exports": {
+    "./eslint/base": "./configs/eslint/base.js",
+    "./eslint/react": "./configs/eslint/react.js",
+    "./eslint/react-native": "./configs/eslint/react-native.js",
+    "./vitest/base": "./configs/vitest/base.js",
+    "./vitest/web": "./configs/vitest/web.js",
+    "./vitest/expo": "./configs/vitest/expo.js"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  }
+}
