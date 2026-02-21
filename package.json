@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Shared CI/CD configs for Ziply projects",
+  "files": ["configs/"],
   "exports": {
     "./eslint/base": "./configs/eslint/base.js",
     "./eslint/react": "./configs/eslint/react.js",
