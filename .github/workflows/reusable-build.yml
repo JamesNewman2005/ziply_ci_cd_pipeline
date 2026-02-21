@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        type: string
+        default: '20'
+      platform:
+        type: string
+        required: true
+        description: '"web" or "expo"'
+      build-command:
+        type: string
+        default: 'npm run build'
+
+jobs:
+  build:
+    name: Build (${{ inputs.platform }})
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: ${{ inputs.build-command }}
