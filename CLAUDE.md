@@ -22,7 +22,7 @@ Shared CI/CD pipeline for Ziply projects. Provides reusable GitHub Actions workf
 
 This repo is installed as a Git npm dependency by consumer projects:
 ```
-npm install -D @ziply/ci-config@github:JamesCole809/ziply_ci_cd_pipeline
+npm install -D @ziply/ci-config@github:JamesNewman2005/ziply_ci_cd_pipeline
 ```
 
 Consumer repos import configs via the package exports map:
@@ -33,7 +33,7 @@ import { webTestConfig } from '@ziply/ci-config/vitest/web';
 
 Consumer repos call reusable workflows:
 ```yaml
-uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-lint-typecheck.yml@main
+uses: JamesNewman2005/ziply_ci_cd_pipeline/.github/workflows/reusable-lint-typecheck.yml@main
 ```
 
 ## Key Commands

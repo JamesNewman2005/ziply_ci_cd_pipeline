@@ -9,14 +9,14 @@ on:
 
 jobs:
   lint:
-    uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-lint-typecheck.yml@main
+    uses: JamesNewman2005/ziply_ci_cd_pipeline/.github/workflows/reusable-lint-typecheck.yml@main
     with:
       typecheck-command: npx tsc -b
 
   build:
-    uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-build.yml@main
+    uses: JamesNewman2005/ziply_ci_cd_pipeline/.github/workflows/reusable-build.yml@main
     with:
       platform: web
 
   test:
-    uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-test.yml@main
+    uses: JamesNewman2005/ziply_ci_cd_pipeline/.github/workflows/reusable-test.yml@main
