@@ -1,0 +1,21 @@
+# Copy this file to ziply_app/.github/workflows/ci.yml
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-lint-typecheck.yml@main
+
+  build:
+    uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-build.yml@main
+    with:
+      platform: expo
+      build-command: npx expo export --platform web
+
+  test:
+    uses: JamesCole809/ziply_ci_cd_pipeline/.github/workflows/reusable-test.yml@main
